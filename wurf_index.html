@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>WurF</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/wurf_design.css">
+</head>	
+
+<body>
+	<div class="nav">
+      <div class="container">
+        <ul class="pull-left">
+          <li><a href="#"><img src="assets/logo.png" height="50" align="top"></a></li>
+    <!--       <li><a href="#">wurf. would you rather friend</a></li> -->
+        </ul>
+        <ul class="pull-right" id="bottom-nav">
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Stories</a></li>
+        </ul>
+      </div>
+    </div>
+    <div id="transbox0"></div>
+    <div class="container" id="hero-board">
+    	<h1 id="textbox0">Would you rather</h1><br>
+    	<input id="input_tag" align="middle" type="text" name="create_question" placeholder="Enter Text">
+    	<br><br>
+    	<div class="span7 text-center"><button id="button_location" type="button" class="btn btn-primary btn-lg outline" onclick="myFunction()">+ADD QUESTION</button></div>
+    </div>
+
+    <div class="container" id="footer">
+    	<a href="https://play.google.com/store?hl=en"><img width="10%" src="assets/googleplay.png"></a>
+    	<a href="https://www.apple.com/ca/itunes/charts/free-apps/"><img width="10%" src="assets/apple_store.gif"></a>
+    </div>
+    <div id="fb-root">
+      <div
+      class="fb-like"
+      data-share="true"
+      data-width="450"
+      data-show-faces="true"
+      style="width:50px">
+      </div>
+    </div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '1413483638953555',
+      xfbml      : true,
+      version    : 'v2.3'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "http://connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+
+</script>
+
+
+<script type="text/javascript" src="js/bootstrap.js"></script>
+
+<script type="text/javascript">
+    // function to send the value to server
+	function myFunction() {
+    	var val = "would you rather " + document.getElementById('input_tag').value;
+    	alert(val);
+	}
+
+  function placeholder_gone() {
+    document.getElementById('input_tag').removeAttribute("placeholder");
+  }
+</script>
+</html>
