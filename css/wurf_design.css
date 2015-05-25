@@ -20,6 +20,13 @@ p h1{
   padding-top: 23px;
 }
 
+#logo_text{
+  padding-top: 5%;
+  color: white;
+  width: 300px;
+  margin-right:0px; 
+}
+
 #hero-board{
 	padding-top: 10%;
 }
@@ -171,6 +178,7 @@ body{
 }
 
 #footer{
+  display: inline;
 	padding-top: 5%;
 	text-align: right;
 }
